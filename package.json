@@ -1,0 +1,16 @@
+{
+  "name": "aoc-2022",
+  "version": "1.0.0",
+  "description": "Advent of Code 2022",
+  "main": "index.js",
+  "repository": "git@github.com:aherback/aoc-2022.git",
+  "author": "Alexander Herback <alexander.herback@wearelevels.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "volta": {
+    "node": "18.12.1"
+  }
+}
