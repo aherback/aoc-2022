@@ -20,11 +20,9 @@ const problem2 = () => {
     return a - b;
   });
   let total = 0;
-  Array(3)
-    .fill(0)
-    .map(() => {
-      total += snacks.pop();
-    });
+  Array(3).forEach(() => {
+    total += snacks.pop();
+  });
 
   return total;
 };
