@@ -23,9 +23,7 @@ const problem1 = () => {
       firstRange.length > secondRange.length ? firstRange : secondRange;
     const smallestList = firstRange === biggestList ? secondRange : firstRange;
 
-    return smallestList.filter((element) => {
-      return !biggestList.includes(element);
-    }).length > 0
+    return smallestList.some((element) => !biggestList.includes(element))
       ? accumulator
       : accumulator + 1;
   }, 0);
@@ -37,21 +35,11 @@ const problem2 = () => {
     const firstRange = populateRange(pair[0]);
     const secondRange = populateRange(pair[1]);
 
-    const biggestList =
-      firstRange.length > secondRange.length ? firstRange : secondRange;
-    const smallestList = firstRange === biggestList ? secondRange : firstRange;
-
-    return smallestList.filter((element) => {
-      return biggestList.includes(element);
-    }).length > 0
+    return firstRange.some((element) => secondRange.includes(element))
       ? accumulator + 1
       : accumulator;
   }, 0);
 };
 
-const main = () => {
-  console.log(problem1());
-  console.log(problem2());
-};
-
-main();
+console.log(problem1());
+console.log(problem2());
