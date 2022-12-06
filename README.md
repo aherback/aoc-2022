@@ -4,6 +4,7 @@ Advent of Code 2022
 
 ## Prerequisites
 
+- Install volta
 - Install ts-node
 - Install yarn
 

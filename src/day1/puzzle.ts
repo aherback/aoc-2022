@@ -20,9 +20,11 @@ const problem2 = () => {
     return a - b;
   });
   let total = 0;
-  Array(3).forEach(() => {
-    total += snacks.pop();
-  });
+  Array(3)
+    .fill(null)
+    .forEach(() => {
+      total += snacks.pop();
+    });
 
   return total;
 };
@@ -31,9 +33,5 @@ const problem1 = () => {
   return Math.max(...snackTotals());
 };
 
-const main = () => {
-  console.log(problem1());
-  console.log(problem2());
-};
-
-main();
+console.log(problem1());
+console.log(problem2());
